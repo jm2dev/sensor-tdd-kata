@@ -1,0 +1,7 @@
+project/target/
+project/project/
+target/
+.history
+.idea/
+.idea_modules/
+
