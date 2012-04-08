@@ -1,0 +1,30 @@
+#+Title:        Sensor: a TDD exercise README
+#+AUTHOR:       José Miguel Martínez Carrasco
+#+EMAIL:        jm2dev@gmail.com
+
+* Introduction
+
+A friend of mine talked about an imaginary detector that provides
+measures as list of integers, and how can we get the average value of
+every points.
+
+I used this problem as a [[http://en.wikipedia.org/wiki/Kata_(programming)][kata]] to play with [[http://www.scalatest.org][ScalaTest]] supported
+styles.
+ 
+* Requirements
+
+  * [[http://www.openjdk.org][OpenJDK]] or any other modern Java Runtime
+  * [[http://www.scala-sbt.org][SBT]]
+  * Internet connection [fn:1]
+    
+* Usage
+
+#+BEGIN_SRC bash
+sbt test
+#+END_SRC
+
+** Footnotes
+
+[fn:1] Welcome to the XXI century, we use Ivy as dependency
+   management, and ideally you should only need scalatest. But as I
+   said, that's in an ideal world.
