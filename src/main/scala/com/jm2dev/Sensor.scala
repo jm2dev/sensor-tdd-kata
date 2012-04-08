@@ -14,15 +14,12 @@ case class Sensor(rawdata: List[Int])
   }
 
   def scoreAt(x: Int, y: Int): Int = {
-    dataAt(x - 1, y - 1) +
-      dataAt(x - 1, y)     +
-      dataAt(x - 1, y + 1) +
-      dataAt(x, y - 1)     +
-      dataAt(x, y)         +
-      dataAt(x, y + 1)     +
-      dataAt(x + 1, y - 1) +
-      dataAt(x + 1, y)     +
-      dataAt(x + 1, y + 1)
+    (-1 to 1).foldLeft(0)( (m: Int, j:Int) =>
+      {
+        val acc = (-1 to 1).foldLeft(0)( (n: Int, i: Int ) => n + dataAt(x + j, y + i))
+        m + acc
+      }
+    )
   }
 
   def scoringPoints: List[Int] = {
@@ -37,9 +34,7 @@ case class Sensor(rawdata: List[Int])
 
   def results: String = {
     (1 to numberOfResults).map( (i:Int) =>
-      {
-        extractScore(uniqueScoringPoints.drop(i - 1))
-      }
+      extractScore(uniqueScoringPoints.drop(i - 1))
     ).toSet.mkString("")
   }
 
@@ -48,7 +43,6 @@ case class Sensor(rawdata: List[Int])
     val candidate = scoringPoints.indexOf(score)
     val coordinates = antitransform(candidate)
     "(%s, %s score: %s)".format(coordinates._1, coordinates._2, score)
-
   }
 
   private val raw = rawdata.tail.tail
