@@ -111,34 +111,6 @@ class SensorTests extends Spec
       val expected = "(1, 1 score: 20)"
       actuals should be(expected)
     }
-
-    it("should return specified results for data set 1")
-    {
-      given("a working sensor with temperature data")
-      val data = List(1, 5, 5, 3, 1, 2, 0, 4, 1, 1, 3, 2, 2, 3, 2, 4, 3, 0, 2, 3, 3, 2, 1, 0, 2, 4, 3)
-      val sensor = Sensor(data)
-
-      when("I want to know especified results")
-      val actuals = sensor.results
-
-      then("I get the following values")
-      val expected = "(3, 3 score: 26)"
-      actuals should be(expected)
-    }
-
-    it("should return specified results for data set 2")
-    {
-      given("a working sensor with temperature data")
-      val data = List(3, 4, 2, 3, 2, 1, 4, 4, 2, 0, 3, 4, 1, 1, 2, 3, 4, 4)
-      val sensor = Sensor(data)
-
-      when("I want to know especified results")
-      val actuals = sensor.results
-
-      then("I get the following values")
-      val expected = "(1, 2 score: 27)(1, 1 score: 25)(2, 2 score: 23)"
-      actuals should be(expected)
-    }
   }
 }
 
