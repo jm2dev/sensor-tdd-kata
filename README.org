@@ -14,7 +14,9 @@ styles.
 * Requirements
 
   * [[http://www.openjdk.org][OpenJDK]] or any other modern Java Runtime
+
   * [[http://www.scala-sbt.org][SBT]]
+
   * Internet connection [fn:1]
     
 * Usage
