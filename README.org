@@ -2,7 +2,7 @@
 #+AUTHOR:       José Miguel Martínez Carrasco
 #+EMAIL:        jm2dev@gmail.com
 
-[[https://secure.travis-ci.org/jm2dev/sensor-tdd-kata.png][http://travis-ci.org/jm2dev/sensor-tdd-kata]]
+[[https://secure.travis-ci.org/jm2dev/sensor-tdd-kata.png]]
 
 * Introduction
 
