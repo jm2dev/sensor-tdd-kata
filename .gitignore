@@ -6,3 +6,5 @@ target/
 .idea_modules/
 .DS_Store
 
+.ensime 
+.ensime_lucene/
