@@ -1,9 +1,9 @@
 package com.jm2dev
 
-import org.scalatest.{GivenWhenThen, Spec}
+import org.scalatest.{FunSpec, GivenWhenThen}
 import org.scalatest.matchers.ShouldMatchers
 
-class SensorTests extends Spec
+class SensorTests extends FunSpec
   with GivenWhenThen
   with ShouldMatchers
 {

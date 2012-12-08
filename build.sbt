@@ -4,10 +4,10 @@ name := "Sensor"
 
 version := "1.0"
                            
-scalaVersion := "2.9.2"
+scalaVersion := "2.10.0-RC3"
 
 libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest" % "1.6.1" % "test"
+  "org.scalatest" % "scalatest_2.10.0-RC2" % "2.0.M5" % "test"
 )
 
 resolvers ++= Seq(
